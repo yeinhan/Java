@@ -1,6 +1,6 @@
 package com.poly.silsub1.shape.model.vo;
 
-public class Circle implements IShape {
+public class Circle extends Shape {
 	private double radius;
 	final double PI = Math.PI;
 	

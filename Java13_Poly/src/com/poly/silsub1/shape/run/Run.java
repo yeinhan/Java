@@ -9,7 +9,8 @@ public class Run {
 		ShapeManager run = new ShapeManager();
 		
 //		run.calcShape();
-		run.TestIShape();
+//		run.TestIShape();
+		run.calcShapeArray();
 	}
 
 }

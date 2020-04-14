@@ -1,30 +1,27 @@
 package com.poly.silsub1.shape.model.vo;
 
-public class Triangle implements IShape {
-
+public class Triangle extends Shape {
 	private double base;
 	private double height;
-	//�⺻ ������
-	public Triangle() {}
 	
 	public Triangle(double base, double height) {
 		this.base = base;
 		this.height = height;
 	}
+	
+	public double getHypotenuse() {
+		return  Math.sqrt(base*base+height*height);
+	}
+	
 	@Override
 	public double area() {
-		double result = (getBase()*getHeight())/2;
-		return result;
+		return base*height/2;
+		
 	}
 
-	public double getHypotenuse() {
-		double result = Math.sqrt(getBase()*getBase()+getHeight()*getHeight());
-		return result;
-	}
 	@Override
 	public double perimeter() {
-		double result = getBase()+getHeight()+getHypotenuse();
-		return result;
+		return base+ height +getHypotenuse();
 	}
 	public double getBase() {
 		return base;

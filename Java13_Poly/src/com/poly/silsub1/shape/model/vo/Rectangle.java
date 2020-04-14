@@ -1,6 +1,6 @@
 package com.poly.silsub1.shape.model.vo;
 
-public class Rectangle implements IShape{
+public class Rectangle extends Shape{
 	private double width;
 	private double height;
 	
