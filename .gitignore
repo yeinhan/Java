@@ -42,3 +42,7 @@ Java16_IO/test1.txt
 Java16_IO/test3.txt
 Java16_IO/test5.txt
 Java16_IO/yein.txt
+Java16_IO/bin/com/io/silsub2/cotroller/NoteManager.class
+Java16_IO/bin/com/io/silsub2/model/dao/NoteDao.class
+Java16_IO/bin/com/io/silsub2/run/Run.class
+Java16_IO/bin/com/io/silsub2/view/NoteMenu.class
