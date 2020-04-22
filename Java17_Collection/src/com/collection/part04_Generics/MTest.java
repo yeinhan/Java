@@ -16,8 +16,6 @@ public class MTest {
 		//1~45사이의 정수를 중복되지 않게, 난수로 6개 발생시켜 출력
 		Set<Integer> set = new HashSet<>();	//중복안되는 Set
 		
-//		int r = (int)(Math.random()*45)+1;
-		
 		while(set.size()<6) {
 			set.add((int)(Math.random()*45)+1);
 		}
