@@ -2,10 +2,10 @@ package com.project.publicmask.model;
 
 public class Person {
 	private String pName;
-	private int pNum;
+	private String pNum;
 	
 	public Person() {}
-	public Person(String pName, int pNum) {
+	public Person(String pName, String pNum) {
 		this.pName = pName;
 		this.pNum = pNum;
 	}
@@ -16,10 +16,10 @@ public class Person {
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
-	public int getpNum() {
+	public String getpNum() {
 		return pNum;
 	}
-	public void setpNum(int pNum) {
+	public void setpNum(String pNum) {
 		this.pNum = pNum;
 	}
 	

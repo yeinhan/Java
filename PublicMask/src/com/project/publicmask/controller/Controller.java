@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import com.project.publicmask.model.Drugstore;
 import com.project.publicmask.model.Mask;
+import com.project.publicmask.model.Person;
 
 public class Controller {
 	private ArrayList<Drugstore> DrugstoreList = new ArrayList<>();
 	private ArrayList<Mask> MaskList = new ArrayList<>();
+	private ArrayList<Person> personList = new ArrayList<>();
 	
 	public Controller() {}
 	
@@ -23,6 +25,20 @@ public class Controller {
 		
 		return MaskList;
 		
+	}
+	
+	public ArrayList viewPerson() {
+		personList.add(new Person("한예인","971113-2222222"));
+		personList.add(new Person("둘예인","991113-2222222"));
+		return personList;
+	}
+	
+	public ArrayList<Person> getpersonList() {
+		return personList;
+	}
+	
+	public void setPersonList(ArrayList<Person> personList) {
+		this.personList = personList;
 	}
 	
 }
