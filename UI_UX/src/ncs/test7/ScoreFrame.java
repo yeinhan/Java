@@ -55,28 +55,6 @@ public class ScoreFrame extends JFrame {
 		calcBtn = new JButton("계산하기");
 		panel2.add(calcBtn);
 
-
-
-//		calcBtn.addActionListener(new ActionListener() {
-//
-//			@Override
-//			public void actionPerformed(ActionEvent event) {
-//				// TODO Auto-generated method stub
-//				String java = javaScore.getText();
-//				System.out.println(java);
-//				String sql = sqlScore.getText();
-//				System.out.println(sql);
-//
-//				int to = Integer.parseInt(java) + Integer.parseInt(sql);
-//				int avg = (Integer.parseInt(java) + Integer.parseInt(sql)) / 2;
-//
-//				total.setText(Integer.toString(to));
-//				average.setText(Integer.toString(avg));
-//
-//				System.out.println(avg);
-//			}
-//		});
-
 		JPanel panel3 = new JPanel();
 		JLabel totalLabel = new JLabel("총점: ");
 		total = new JTextField(10);
@@ -92,7 +70,7 @@ public class ScoreFrame extends JFrame {
 		ScoreFrame.add(panel2, "Center");
 		ScoreFrame.add(panel3, "South");
 		
-		calcBtn.addActionListener(new ScoreFrame$ActionHandlerr(calcBtn, total, average,javaScore, sqlScore));
+		calcBtn.addActionListener(new ScoreFrame$ActionHandler(calcBtn, total, average,javaScore, sqlScore));
 
 
 		this.setVisible(true);
@@ -101,6 +79,37 @@ public class ScoreFrame extends JFrame {
 
 	}
 
+ class ScoreFrame$ActionHandler implements ActionListener{
+		private JButton btn;
+		private JTextField javaScore;
+		private JTextField sqlScore;
+		private JTextField total;
+		private JTextField avg;
+		
+		public ScoreFrame$ActionHandler(JButton btn, JTextField total, JTextField avg,JTextField javaScore, JTextField sqlScore) {
+			btn.addActionListener(this);
+			this.javaScore = javaScore;
+			this.sqlScore = sqlScore;
+			this.total = total;
+			this.avg = avg;
+		}
+		
+		@Override
+		public void actionPerformed(ActionEvent event) {
 
+			String num1 = javaScore.getText();
+			String num2 = sqlScore.getText();
+			
+			String re_total = Integer.toString((Integer.parseInt(num1)+Integer.parseInt(num2)));
+			String re_avg= String.valueOf((Integer.parseInt(num1)+Integer.parseInt(num2))/2);
+			
+//			int tto = Integer.parseInt(javaScore.getText())+Integer.parseInt(sqlScore.getText());
+			
+
+			total.setText(String.valueOf(re_total));
+			avg.setText(String.valueOf(re_avg));
+			
+		}
+	}
 	
 }
